@@ -1,0 +1,19 @@
+<!-- <<ul>
+	<% @results.each do |result| %>
+		<li>
+			<%= result.title %>
+		</li>
+	<% end %>
+</ul>
+ -->
+
+<h1>search</h1>
+<ul>
+	<% @results.each do |x| %>
+	<li> <%= x.title%> </li>
+	<li> <%= x.description%> </li>
+	<img src=<%= x.artwork_url%>/>
+	<br>
+	<% end%>
+</ul>  
+ 

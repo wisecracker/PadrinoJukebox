@@ -1,0 +1,32 @@
+post :search do
+@results = Track.search(params[names])
+end
+
+"client = Soundcloud.new(:client_id =>"
+
+
+require 'soundcloud'
+
+# create a client object with your app credentials
+client = Soundcloud.new(:client_id => 'YOUR_CLIENT_ID')
+
+# find all sounds of buskers licensed under 'creative commons share alike'
+tracks = client.get('/tracks', :q => 'buskers', :licence => 'cc-by-sa')
+
+require 'soundcloud'
+
+# create a client object with your app credentials
+client = Soundcloud.new(:client_id => 'YOUR_CLIENT_ID')
+
+# find all sounds of buskers licensed under 'creative commons share alike'
+tracks = client.get('/tracks', :q => 'buskers', :licence => 'cc-by-sa')
+
+require 'soundcloud'
+
+# create a client object with your app credentials
+client = Soundcloud.new(:client_id => 'YOUR_CLIENT_ID')
+
+# find all tracks with the genre 'punk' that have a tempo greater than 120 bpm.
+tracks = client.get('/tracks', :genres => 'punk', :bpm => {
+  :from => 120
+})
